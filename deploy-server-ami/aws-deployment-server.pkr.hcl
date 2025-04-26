@@ -39,6 +39,9 @@ build {
   }
 
   post-processor "shell-local" {
-    inline = ["export TF_VAR_deploy_server_id=$(jq -r '.builds[-1].artifact_id | split(\":\") | .[1]' manifest.json)", "echo $TF_VAR_deploy_server_id"]
+    inline = [
+      "export TF_VAR_deploy_server_id=$(jq -r '.builds[-1].artifact_id | split(\":\") | .[1]' manifest.json)", 
+      "echo $TF_VAR_deploy_server_id"
+    ]
   }
 }
