@@ -37,7 +37,7 @@ resource "aws_autoscaling_group" "sg-auto-scaling" {
   }
 }
 
-resource "aws_autoscaling_attachment" "sg-asa" {
-  autoscaling_group_name = aws_autoscaling_group.sg-auto-scaling.id
-  lb_target_group_arn    = var.load_balancer_id
-}
+#resource "aws_autoscaling_attachment" "sg-asa" {
+#  autoscaling_group_name = aws_autoscaling_group.sg-auto-scaling.id
+#  lb_target_group_arn    = var.load_balancer_id
+#}

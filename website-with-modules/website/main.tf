@@ -29,6 +29,9 @@ module "load-balancer" {
 
   # Passed from Sec Groups Module
   allow_http_id = module.sec-groups.allow_http_id
+
+  # Passed from VPC Module
+  vpc_id = module.vpc.vpc_id
 }
 
 # Create the Autoscaling Group
@@ -58,6 +61,6 @@ module "autoscaling-group" {
   allow_ssh_id  = module.sec-groups.allow_ssh_id
 
   # Passed from Load Balancer Module
-  load_balancer_id = module.load-balancer.load_balancer_id
+  #load_balancer_id = module.load-balancer.load_balancer_id
   #lb_target_group_arn = module.load-balancer.load_balancer_id
 }

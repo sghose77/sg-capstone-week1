@@ -12,3 +12,11 @@ resource "aws_lb" "sg-lb" {
     Solution = "website with modules"
   }
 }
+
+resource "aws_lb_target_group" "sg-lb-target-group" {
+  name        = "${var.project}-alb-tg"
+  target_type = "alb"
+  port        = 80
+  protocol    = "TCP"
+  vpc_id      = var.vpc_id
+}

@@ -73,4 +73,5 @@ variable "subnet_b_id" {
 
 variable "load_balancer_id" {
   type = string
+  default = ""
 }
