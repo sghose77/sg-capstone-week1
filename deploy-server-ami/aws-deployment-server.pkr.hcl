@@ -16,7 +16,7 @@ source "amazon-ebs" "sg-deploy-server" {
 }
 
 build {
-  name = "learn-packer"
+  name = "deploy-server"
   sources = [
     "source.amazon-ebs.sg-deploy-server"
   ]
